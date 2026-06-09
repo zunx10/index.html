@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday JOJA 💜</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background: linear-gradient(
+    135deg,
+    #0f172a,
+    #1e1b4b,
+    #312e81,
+    #4c1d95
+    );
+    background-size:400% 400%;
+    animation:gradientMove 12s ease infinite;
+    min-height:100vh;
+    overflow-x:hidden;
+    text-align:center;
+    color:white;
+}
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.container{
+    padding:40px 20px;
+}
+
+h1{
+    font-size:4rem;
+    margin-top:40px;
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px #ffffff;
+    }
+    to{
+        text-shadow:0 0 25px #c4b5fd,0 0 50px #8b5cf6;
+    }
+}
+
+.subtitle{
+    font-size:1.4rem;
+    margin-top:10px;
+    color:#ddd6fe;
+}
+
+button{
+    padding:15px 30px;
+    border:none;
+    border-radius:30px;
+    margin:15px;
+    cursor:pointer;
+    font-size:1rem;
+    background:#4338ca;
+    color:white;
+    font-weight:bold;
+    transition:.3s;
+    box-shadow:0 0 15px rgba(139,92,246,.5);
+}
+
+button:hover{
+    transform:scale(1.08);
+}
+
+.card{
+    display:none;
+    max-width:900px;
+    margin:30px auto;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    padding:30px;
+    border-radius:20px;
+    text-align:left;
+    line-height:1.9;
+    font-size:1.05rem;
+    border:1px solid rgba(255,255,255,.15);
+}
+
+.surprise{
+    display:none;
+    margin-top:20px;
+    font-size:1.3rem;
+    font-weight:bold;
+    color:#ddd6fe;
+}
+
+.final{
+    display:none;
+    font-size:2rem;
+    margin-top:30px;
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.08);}
+    100%{transform:scale(1);}
+}
+
+.heart{
+    position:fixed;
+    font-size:22px;
+    animation:float 6s linear infinite;
+    opacity:.8;
+    pointer-events:none;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+    }
+    to{
+        transform:translateY(-100px);
+    }
+}
+
+footer{
+    margin:40px 0;
+    color:#ddd6fe;
+}
+
+.highlight{
+    color:#c4b5fd;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎂 HAPPY BIRTHDAY JOJA 🎂</h1>
+
+<p class="subtitle">
+A special little surprise for a very special person 💜
+</p>
+
+<br>
+
+<button onclick="openGift()">
+🎁 Open Your Birthday Gift
+</button>
+
+<div class="card" id="letter">
+
+<h2 style="text-align:center;">
+💌 A Letter For JOJA 💌
+</h2>
+
+<br>
+
+<p>
+
+Alhamdulillah, I feel incredibly lucky to have you in my life.
+Your presence means more to me than words can ever express.
+You are truly someone very special to me.
+
+<br><br>
+
+You are the one person with whom I can share my thoughts, my feelings,
+and everything about my life without any hesitation.
+Honestly, no one understands me better than you do.
+You are a real gem, and having you in my life matters so much to me.
+
+<br><br>
+
+Sometimes, I don't even know how to thank you.
+You often do things for me that I never even expect.
+There are moments when I genuinely wonder whether I deserve all the kindness,
+care, and support that you give me.
+
+<br><br>
+
+I may not be a perfect friend, but I can promise you one thing —
+I will always be there for you.
+Whenever you feel low, whenever something doesn't feel right,
+or whenever life becomes difficult, just remember me.
+I will stand by your side in every situation,
+just like you have always stood by mine.
+
+<br><br>
+
+And please, don't cry, yaar.
+You really don't look good when you're sad.
+I always want to see you smiling, happy, and successful.
+I want to see you achieve everything you dream of because
+you truly deserve all the good things life has to offer.
+
+<br><br>
+
+You are amazing just the way you are,
+and you deserve nothing less than the very best.
+Just stay the same wonderful person you've always been,
+and never stop being yourself.
+
+<br><br>
+
+💜 I honestly can't wait for the day when I'll save your name as
+<b>"Dr. Juweriya"</b>.
+Seeing you achieve that dream will make me happier than words can describe.
+
+<br><br>
+
+Thank you for being a part of my life, <b>JOJA</b>. 💜
+
+<br><br>
+
+Stay happy, stay blessed, and keep shining forever.
+
+<br><br>
+
+<b>
+With lots of love and endless prayers,<br>
+— Zunaira 💜
+</b>
+
+<br><br>
+
+<b>HATEEEE YOUUUU BROOOOO!!! 😭💜🎉</b>
+
+</p>
+
+</div>
+
+<button onclick="showSecret()" id="secretBtn" style="display:none;">
+💜 Click For A Secret Message
+</button>
+
+<div class="surprise" id="secret">
+✨ No matter where life takes us, you'll always be one of the most important people in my life. ✨
+</div>
+
+<button onclick="openSong()" id="songBtn" style="display:none;">
+🎵 Tera Yaar Hoon Main
+</button>
+
+<button onclick="lastSurprise()" id="lastBtn" style="display:none;">
+🌙 One Last Surprise
+</button>
+
+<div class="final" id="finalMsg">
+
+🎊 HAPPY BIRTHDAY JOJA 🎊
+
+<br><br>
+
+May your smile never fade,
+<br>
+May your dreams come true,
+<br>
+May Allah bless you with success,
+happiness and peace.
+
+<br><br>
+
+👩‍⚕️ Dr. Juweriya 💜✨
+
+<br><br>
+
+Keep shining, future doctor! 🌙💜
+
+</div>
+
+<footer>
+Made with 💜 by Zunaira
+</footer>
+
+</div>
+
+<script>
+
+function openGift(){
+document.getElementById("letter").style.display="block";
+document.getElementById("secretBtn").style.display="inline-block";
+}
+
+function showSecret(){
+document.getElementById("secret").style.display="block";
+document.getElementById("songBtn").style.display="inline-block";
+document.getElementById("lastBtn").style.display="inline-block";
+}
+
+function openSong(){
+window.open(
+"https://www.youtube.com/watch?v=EatzcaVJRMs",
+"_blank"
+);
+}
+
+function lastSurprise(){
+document.getElementById("finalMsg").style.display="block";
+}
+
+const icons = ["💜","✨","🌙","⭐"];
+
+for(let i=0;i<45;i++){
+
+let heart=document.createElement("div");
+
+heart.classList.add("heart");
+
+heart.innerHTML=
+icons[Math.floor(Math.random()*icons.length)];
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=
+(3+Math.random()*5)+"s";
+
+heart.style.fontSize=
+(15+Math.random()*25)+"px";
+
+document.body.appendChild(heart);
+}
+
+</script>
+
+</body>
+</html>
