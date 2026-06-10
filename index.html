@@ -34,7 +34,9 @@ body{
     50%{background-position:100% 50%;}
     100%{background-position:0% 50%;}
 }
-
+<audio id="bgMusic" preload="auto">
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
 .container{
     padding:40px 20px;
 }
@@ -246,9 +248,7 @@ With lots of love and endless prayers,<br>
 ✨ No matter where life takes us, you'll always be one of the most important people in my life. ✨
 </div>
 
-<button onclick="openSong()" id="songBtn" style="display:none;">
-🎵 Tera Yaar Hoon Main
-</button>
+
 
 <button onclick="lastSurprise()" id="lastBtn" style="display:none;">
 🌙 One Last Surprise
@@ -288,20 +288,20 @@ Made with 💜 by Zunaira
 function openGift(){
 document.getElementById("letter").style.display="block";
 document.getElementById("secretBtn").style.display="inline-block";
+
+const music = document.getElementById("bgMusic");
+music.play();
 }
 
 function showSecret(){
 document.getElementById("secret").style.display="block";
-document.getElementById("songBtn").style.display="inline-block";
 document.getElementById("lastBtn").style.display="inline-block";
+
+const music = document.getElementById("bgMusic");
+music.play();
 }
 
-function openSong(){
-window.open(
-"https://www.youtube.com/watch?v=EatzcaVJRMs",
-"_blank"
-);
-}
+
 
 function lastSurprise(){
 document.getElementById("finalMsg").style.display="block";
