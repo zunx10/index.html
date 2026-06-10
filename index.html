@@ -144,7 +144,9 @@ footer{
 </head>
 
 <body>
-
+<audio id="bgMusic" preload="auto">
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
 <div class="container">
 
 <h1>🎂 HAPPY BIRTHDAY JOJA 🎂</h1>
@@ -296,9 +298,6 @@ music.play();
 function showSecret(){
 document.getElementById("secret").style.display="block";
 document.getElementById("lastBtn").style.display="inline-block";
-
-const music = document.getElementById("bgMusic");
-music.play();
 }
 
 
@@ -330,6 +329,7 @@ document.body.appendChild(heart);
 }
 
 </script>
+
 
 </body>
 </html>
